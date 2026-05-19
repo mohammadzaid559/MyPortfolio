@@ -1,0 +1,177 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .hero-bg {
+    background-color: var(--surface-soft);
+    background-image: radial-gradient(circle at top, rgba(56, 189, 248, 0.18), transparent 24%), radial-gradient(circle at 85% 35%, rgba(59, 130, 246, 0.16), transparent 20%), radial-gradient(circle at 18% 82%, rgba(168, 85, 247, 0.12), transparent 18%);
+  }
+
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 12rem;
+    border-radius: 9999px;
+    background: linear-gradient(135deg, var(--accent), var(--accent-strong));
+    padding: 0.85rem 1.75rem;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #ffffff;
+    box-shadow: 0 22px 42px -16px rgba(15, 23, 42, 0.28);
+    transition: transform 0.28s ease, box-shadow 0.28s ease, background 0.28s ease;
+    text-decoration: none;
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 26px 48px -18px rgba(15, 23, 42, 0.32);
+    background: linear-gradient(135deg, #22d3ee, #818cf8);
+  }
+
+  .dark .btn-primary {
+    color: #020617;
+  }
+
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 12rem;
+    border-radius: 9999px;
+    border: 1px solid var(--border);
+    background-color: rgba(255, 255, 255, 0.88);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    padding: 0.85rem 1.75rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text);
+    transition: background-color 0.28s ease, border-color 0.28s ease, transform 0.28s ease;
+    text-decoration: none;
+  }
+
+  .btn-secondary:hover {
+    background-color: rgba(248, 250, 252, 0.95);
+  }
+
+  .dark .btn-secondary {
+    border-color: rgba(71, 85, 105, 0.6);
+    background-color: rgba(15, 23, 42, 0.8);
+    color: #f8fafc;
+  }
+
+  .dark .btn-secondary:hover {
+    background-color: rgba(30, 41, 59, 0.9);
+  }
+
+  .btn-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1.25rem;
+  }
+
+  .btn-group > * {
+    flex: 1 1 auto;
+  }
+
+  .input-field {
+    width: 100%;
+    border-radius: 2rem;
+    border: 1px solid var(--border);
+    background-color: var(--surface);
+    padding: 0.95rem 1.25rem;
+    font-size: 1rem;
+    color: var(--text);
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+  }
+
+  .input-field:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 10px rgba(34, 211, 238, 0.12);
+    background-color: var(--surface);
+  }
+
+  .dark .input-field {
+    border-color: rgba(71, 85, 105, 0.85);
+    background-color: #0f172a;
+    color: #f8fafc;
+  }
+
+  .section-card {
+    border-radius: 2rem;
+    border: 1px solid var(--border);
+    background: var(--surface-soft);
+    padding: 1.9rem;
+    min-height: 260px;
+    box-shadow: 0 28px 60px -34px rgba(15, 23, 42, 0.15);
+    transition: transform 0.28s ease, background 0.28s ease, border-color 0.28s ease;
+  }
+
+  .section-card:hover {
+    transform: translateY(-6px);
+  }
+
+  .skill-card {
+    min-height: 10px;
+    padding: 1rem 1.25rem;
+    box-shadow: 0 20px 40px -20px rgba(15, 23, 42, 0.18);
+  }
+
+  .dark .section-card {
+    border-color: rgba(71, 85, 105, 0.45);
+    background: rgba(15, 23, 42, 0.85);
+  }
+
+  .section-heading {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    color: var(--heading);
+  }
+
+  .dark .section-heading {
+    color: #ffffff;
+  }
+
+  @media (min-width: 640px) {
+    .section-heading {
+      font-size: 2.5rem;
+    }
+  }
+
+  .section-subtitle {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 42rem;
+    font-size: 1rem;
+    line-height: 1.75;
+    color: var(--muted);
+  }
+
+  .dark .section-subtitle {
+    color: #94a3b8;
+  }
+
+  @media (max-width: 640px) {
+    .btn-primary,
+    .btn-secondary {
+      width: 100%;
+      min-width: auto;
+    }
+
+    .section-card {
+      padding: 1.5rem;
+    }
+  }
+}
+
+body {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+section {
+  scroll-margin-top: 5rem;
+}
