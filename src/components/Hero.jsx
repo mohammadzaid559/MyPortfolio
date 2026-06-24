@@ -32,7 +32,7 @@ export default function Hero() {
         </motion.p>
 
         <div className="btn-group">
-          <a href="/zaidfinalresumeMERN.pdf" download className="btn-primary">
+          <a href="/MohammadZaidResume.pdf" download className="btn-primary">
             Download Resume
           </a>
           <a href="#contact" className="btn-secondary">
